@@ -1,0 +1,32 @@
+body{
+	background-color: #ddbcf4;
+	margin: 0;
+	font-family: Tahoma, sans-serif;
+}
+h1, div, p, a{
+	color: #103052;
+	margin: 0;
+}
+a:hover{
+	color: #d63ecd;
+	transform: scale(1);
+}
+h1{
+	background-color: #6228c1;
+	color: #f6e4f6;
+	text-align: center;
+	padding: 50px 0;
+}
+div, p{
+	font-style: italic;
+	font-size: 14px;
+}
+ul{
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+li>ul{
+	margin-left: 0;
+	transform: none;
+}
+
