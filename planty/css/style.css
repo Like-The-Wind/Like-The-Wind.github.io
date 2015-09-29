@@ -1,0 +1,599 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.clearfix:after{
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+}
+@font-face {
+    font-family: 'Josefin Slab Regular';
+    src: url('../fonts/josefinslab-regular-webfont.eot');
+    src: url('../fonts/josefinslab-regular-webfont.woff') format('woff'),
+    url('../fonts/josefinslab-regular-webfont.ttf') format('truetype'),
+    url('../fonts/josefinslab-regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Slab Bold';
+    src: url('../fonts/josefinslab-bold-webfont.eot');
+    src: url('../fonts/josefinslab-bold-webfont.woff') format('woff'),
+    url('../fonts/josefinslab-bold-webfont.ttf') format('truetype'),
+    url('../fonts/josefinslab-bold-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Slab SemiBold';
+    src: url('../fonts/josefinslab-semibold-webfont.eot');
+    src: url('../fonts/josefinslab-semibold-webfont.woff') format('woff'),
+    url('../fonts/josefinslab-semibold-webfont.ttf') format('truetype'),
+    url('../fonts/josefinslab-semibold-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Slab Light';
+    src: url('../fonts/josefinslab-light-webfont.eot');
+    src: url('../fonts/josefinslab-light-webfont.woff') format('woff'),
+    url('../fonts/josefinslab-light-webfont.ttf') format('truetype'),
+    url('../fonts/josefinslab-light-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Euphorigenic Regular';
+    src: url('../fonts/euphorigenic-webfont.eot');
+    src: url('../fonts/euphorigenic-webfont.woff') format('woff'),
+    url('../fonts/euphorigenic-webfont.ttf') format('truetype'),
+    url('../fonts/euphorigenic-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Amatic SC Regular';
+    src: url('../fonts/amaticsc-regular-webfont.eot');
+    src: url('../fonts/amaticsc-regular-webfont.woff') format('woff'),
+    url('../fonts/amaticsc-regular-webfont.ttf') format('truetype'),
+    url('../fonts/amaticsc-regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Angelic Serif';
+    src: url('../fonts/angelic_serif-webfont.eot');
+    src: url('../fonts/angelic_serif-webfont.woff') format('woff'),
+    url('../fonts/angelic_serif-webfont.ttf') format('truetype'),
+    url('../fonts/angelic_serif-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body, header{
+    margin: 0 auto;
+    max-width: 980px;
+}
+.slider{
+    width: 100%;
+    position: relative;
+}
+.chemp{
+    position: absolute;
+    top: 0;
+    left: 40px;
+    z-index: 2;
+}
+.market{
+    text-align: center;
+    width: 195px;
+    height: 195px;
+    background: url('../img/shape.png');
+    position: absolute;
+    right: 14px;
+    top: 223px;
+    z-index: 2;
+}
+.market h3{
+    font-family: 'Euphorigenic Regular';
+    font-size: 30px;
+    line-height: 30px;
+    padding-top: 30px;
+    color: #7cc7c5;
+}
+.market p{
+    font-family: 'Josefin Slab SemiBold';
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 5px;
+    color: #fff;
+}
+.logo{
+    background: #42685e;
+    color: #fffbe3;
+    position: relative;
+}
+.logo_i{
+    padding: 35px 45px;
+}
+.logo img{
+    display: inline-block;
+    position: absolute;
+    width: 188px;
+    height: 189px;
+    top: 5px;
+    left: 394px;
+}
+.logo-text__left, .logo-text__right{
+    width: 301px;
+    position: relative;
+}
+.logo-text__left{
+    float: left;
+}
+.logo-text__right{
+    float: right;
+}
+.logo-text__left p, .logo-text__right p{
+    width: 100%;
+    padding: 20px 0 25px 0;
+    vertical-align: middle;
+    text-align: center;
+}
+.logo-text__left p{
+    font-family: 'Josefin Slab Light';
+    font-size: 25px;
+    line-height: 28px;
+}
+.logo-text__right p{
+    font-family: 'Josefin Slab Regular';
+    font-size: 23px;
+    line-height: 27px;
+}
+.logo-text__left span, .logo-text__right span{
+    line-height: 25px;
+    font-family: 'Josefin Slab SemiBold';
+}
+.logo-text__right b{
+    font-family: 'Josefin Slab Bold';
+}
+.logo-text__left:before, .logo-text__right:before, .logo-text__left:after, .logo-text__right:after{
+    display: inline-block;
+    content: '';
+    background: url("../img/border.png") no-repeat 50% 50%;
+    width: 100%;
+    height: 4px;
+}
+.logo-text__left:before, .logo-text__right:before{
+    position: absolute;
+    top: 0;
+}
+.logo-text__left:after, .logo-text__right:after{
+    position: absolute;
+    bottom: 0;
+}
+/*for mobile*/
+.main-menu_w{
+    padding: 18px 62px 15px 101px;
+}
+.main-menu_w ul li{
+    display: inline-block;
+    font-family: 'Josefin Slab Regular';
+    font-size: 19px;
+    line-height: 19px;
+}
+.main-menu ul li{
+    padding-left: 30px;
+}
+.social ul li{
+    padding-left: 10px;
+}
+.social li a{
+    color: #91cecc;
+}
+.main-menu li a{
+    background-color: #fff;
+    color: #42685e;
+}
+.main-menu li:hover, .social li:hover{
+    text-decoration: underline;
+}
+.main-menu{
+    float: left;
+}
+.social{
+    float: right;
+}
+input[type="checkbox"]{
+    display: none;
+}
+    /*CONTENT*/
+.baner img, .item-img__right img, .item-img__left img{
+    width: 100%;
+    display: block;
+}
+.item-info__left{
+    width: 50%;
+    height: 325px;
+    color: #7cc7c5;
+    float: left;
+    position: relative;
+}
+.item-info__left h2{
+    font-family: 'Amatic SC Regular';
+    font-size: 63px;
+    line-height: 63px;
+    padding: 62px 110px 0 25px;
+}
+.item-info__left p{
+    font-family: 'Josefin Slab Regular';
+    font-size: 19px;
+    line-height: 23px;
+    color: #6a6a69;
+    padding: 35px 50px 0 26px;
+}
+.item-info__left i{
+    display: inline-block;
+    content: '';
+    background: url("../img/chicken.png") no-repeat 0 0;
+    width: 75px;
+    height: 92px;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+.item-info__left b{
+    font-family: 'Josefin Slab Bold';
+}
+.item-img__right{
+    display: block;
+    width: 50%;
+    float: right;
+}
+.item-img__left{
+    width: 50%;
+    float: left;
+}
+.item-info__right{
+    width: 50%;
+    height: 325px;
+    float: right;
+    background: #7cc7c5;
+    color: #fffbe3;
+}
+.item-info__right h3{
+    font-family: 'Amatic SC Regular';
+    font-size: 100px;
+    line-height: 300px;
+    text-align: center;
+}
+.item-info__right ul{
+    /*list-style-image: url("../img/marker.png");*/
+    padding: 0 50px 0 60px;
+}
+.item-info__right ul li{
+    display: inline-block;
+    font-family: 'Amatic SC Regular';
+    font-size: 36px;
+    line-height: 42px;
+    padding-top: 17px;
+}
+.item-info__left h3{
+    font-family: 'Amatic SC Regular';
+    font-size: 80px;
+    line-height: 80px;
+    padding-top: 127px;
+    text-align: center;
+}
+footer{
+    background: #42685e;
+    color: #fffbe3;
+    padding: 32px 20px 40px 30px;
+}
+.contact-phone{
+    font-family: 'Josefin Slab Light';
+    font-size: 17px;
+    line-height: 22px;
+    padding-bottom: 40px;
+}
+.contact-mail{
+    font-family: 'Josefin Slab Light';
+    font-size: 18px;
+    line-height: 18px;
+}
+
+@media  screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+    .slider{
+        width: 100%;
+    }
+    .market {
+        top: 135px;
+    }
+    .logo{
+        width: 100%;
+    }
+    .logo_i{
+        padding: 15px 0;
+    }
+    .logo img{
+        width: 150px;
+        height: 150px;
+        top: 5px;
+        left: 310px;
+    }
+    .main-menu_w{
+        padding: 18px 62px 15px 30px;
+    }
+    .social{
+        float: none;
+        text-align: center;
+    }
+    .social ul{
+        display: inline-block;
+        padding-top: 15px;
+    }
+    .item-info__left h2{
+        font-size: 60px;
+        line-height: 55px;
+        padding: 10px 50px 0 25px;
+    }
+    .item-info__left p{
+        line-height: 20px;
+        padding: 10px 20px 0 25px;
+    }
+    .item-info__left i{
+        top: 20px;
+        right: 10px;
+    }
+    .item-info__left, .item-info__right{
+        height: 255px;
+    }
+    .item-info__left h3{
+        padding-top: 90px;
+    }
+    .item-info__right h3{
+        font-size: 80px;
+        line-height: 250px;
+    }
+    .item-info__right ul li{
+        font-size: 27px;
+        line-height: 30px;
+        padding-top: 12px;
+    }
+}
+@media  screen and (max-width: 767px){
+  /* mobile*/
+    .chemp, .logo-text__left, .logo-text__right{
+        display: none;
+    }
+    .logo{
+        width: 100%;
+        height: 132px;
+        position: absolute;
+        top:0;
+    }
+    .logo img{
+        left: 90px;
+        width: 125px;
+        height: 125px;
+    }
+    .slider{
+        padding-top: 132px;
+    }
+    .logo-text__left, .logo-text__right{
+        width: 0;
+        height: 0;
+    }
+    .item-info__left, .item-info__right, .item-img__left, .item-img__right{
+        width: 100%;
+    }
+    .show-menu {
+        color: #fffbe3;
+        background: #7cc6c4;
+        border-radius: 3px;
+        padding: 20px 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 5;
+    }
+    input[type="checkbox"] ~ .main-menu_w{
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ .main-menu_w {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    input[type="checkbox"]:checked + .show-menu {
+        background: none;
+    }
+    .main-menu_w{
+        padding: 40px 0 0 0;
+        text-align: center;
+        height: 334px;
+        z-index: 3;
+    }
+    .social{
+        width: 100%;
+        padding: 30px 0 0 0;
+    }
+    .main-menu_w, .main-menu_w li a{
+        background:#fffbe3;
+    }
+    .main-menu ul li, .social ul li{
+        display: inline-block;
+    }
+    .main-menu ul li, .main-menu li a, .social ul li, .social li a{
+        width: 100%;
+        padding: 5px 0;
+    }
+    .lines, .lines::before, .lines::after{
+        height: 5px;
+        width: 30px;
+        background: #f8f8f8;
+        border-radius: 3px;
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+        top: 18px;
+        content: '';
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .lines::before{
+        top: -10px;
+        right: 0;
+    }
+    .lines::after{
+        top: 10px;
+        right: 0;
+    }
+    input[type="checkbox"]:checked + .show-menu .lines{
+        height:30px;
+        width:30px;
+        background:none;
+        border:3px solid #343430;
+        border-radius:50%;
+        top:2px;
+        right:2px;
+        transform:rotate(90deg);
+        -ms-transform:rotate(90deg);
+        -webkit-transform:rotate(90deg);
+    }
+
+    input[type="checkbox"]:checked + .show-menu .lines::before,
+    input[type="checkbox"]:checked + .show-menu .lines::after{
+        top:13px;
+        height:3px;
+        width:30px;
+        background: #343430;
+    }
+    input[type="checkbox"]:checked + .show-menu .lines::before{
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+    }
+
+    input[type="checkbox"]:checked + .show-menu .lines::after{
+        transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        -webkit-transform:rotate(-45deg);
+    }
+    .market{
+        background: #343430;
+        width: 100%;
+        height: 110px;
+        top: 264px;
+        right: 0;
+    }
+    .market h3{
+        padding-top: 10px;
+    }
+    .market p{
+        line-height: 16px;
+    }
+    .baner{
+        padding-top: 110px;
+    }
+    .item-info__left h2{
+        font-size: 50px;
+        line-height: 45px;
+        padding: 10px 50px 0 15px;
+    }
+    .item-info__left p{
+        font-size: 16px;
+        line-height: 16px;
+        padding: 10px 10px 0 15px;
+    }
+    .item-info__left i{
+        top: 10px;
+        right: 10px;
+    }
+    .item-info__left, .item-info__right{
+         height: 210px;
+     }
+    .item-info__left h3{
+        font-size: 60px;
+        padding-top: 70px;
+    }
+    .item-info__right h3{
+        font-size: 60px;
+        line-height: 220px;
+    }
+    .item-info__right ul{
+        padding: 0 20px 0 30px;
+    }
+    .item-info__right ul li{
+        font-size: 25px;
+        line-height: 27px;
+        padding-top: 12px;
+    }
+    footer{
+        padding: 22px 10px 20px 10px;
+    }
+    .contact-phone{
+        font-size: 14px;
+        line-height: 19px;
+        padding-bottom: 20px;
+    }
+    .contact-mail{
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
