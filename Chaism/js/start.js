@@ -1,6 +1,19 @@
 
 (function(){
-                                                   //video resize
+                                                   //preloader
+    $(window).load(function () {
+        //if($('.no-touch').length){
+        //    skrollr.init({
+        //        forceHeight: false
+        //    });
+        //}
+        setTimeout(function(){
+            $('#preloader').fadeOut('slow', function () {
+            });
+        },2000);
+
+    });
+                                                //video resize
     function setHeight() {
         windowHeight = $(window).innerHeight();
         $('.video-bg').css('min-height', windowHeight);
@@ -135,14 +148,6 @@
     $('.arrow').click(function(){
         $('html,body').scrollTo('.content', 1000, { queue:true });
     });
-                                                       //scrollTo (with animate)
-    //$('.arrow').click(function() {
-    //    $('html,body').animate({
-    //        scrollTop: $('.content').offset().top
-    //    }, 2000);
-    //    return false;
-    //});
-
 })();
 
 
